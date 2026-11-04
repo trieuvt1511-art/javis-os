@@ -2,7 +2,8 @@
 
 ### Local meetings
 
-- Preparing local meeting recordings and minutes.
+- Record microphone audio explicitly or choose an audio file in Chat, with durable storage and interrupted upload recovery.
+- Transcribe locally with timestamps and create cited Vietnamese minutes using the connected model, sending text only.
 
 # Changelog
 

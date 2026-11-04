@@ -5,7 +5,7 @@
   let pending = Promise.resolve(), failure = null, index = 0, timer, active = false;
   const t = key => { const full = "meeting." + key; return window.t ? window.t(full) : key; };
   const brain = () => (window.JavisSessions && window.JavisSessions.brain()) || "brain";
-  let selectedBrain;
+  let selectedBrain, lastRows = "";
   function url(path) { return "/meetings" + path + "?brain=" + encodeURIComponent(selectedBrain); }
   async function api(path, method, body, json) {
     const response = await fetch(url(path), {method:method || "GET", body:body,
@@ -52,7 +52,9 @@
   }
   async function refresh() {
     try {
-      const data = await api(""); rows.replaceChildren();
+      const data = await api(""); const signature = JSON.stringify(data);
+      if (signature === lastRows) return;
+      lastRows = signature; rows.replaceChildren();
       for (const row of data) {
         const box = document.createElement("section");
         const label = document.createElement("p");
@@ -125,7 +127,7 @@
   }
   function open() {
     if (dialog) { dialog.showModal(); return; }
-    selectedBrain = brain();
+    selectedBrain = brain(); lastRows = "";
     dialog = document.createElement("dialog"); dialog.id="meetingDialog";
     dialog.style.cssText="width:min(680px,90vw);max-height:85vh;overflow:auto;padding:20px;border-radius:16px";
     const title=document.createElement("h2");title.textContent=t("title");dialog.append(title);

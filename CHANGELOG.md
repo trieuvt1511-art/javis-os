@@ -2,7 +2,8 @@
 
 ### Cuộc họp cục bộ
 
-- Đang chuẩn bị ghi âm và biên bản họp cục bộ.
+- Chat có mục Cuộc họp để chủ động ghi mic hoặc chọn audio, lưu bền và khôi phục khi mạng gián đoạn.
+- Phiên âm cục bộ có mốc thời gian; tạo biên bản tiếng Việt qua model đã kết nối, chỉ gửi văn bản.
 
 # Nhật ký cập nhật
 
