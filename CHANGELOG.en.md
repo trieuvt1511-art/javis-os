@@ -1,3 +1,9 @@
+## 0.466.0
+
+### Local meetings
+
+- Preparing local meeting recordings and minutes.
+
 # Changelog
 
 *[Tiếng Việt](CHANGELOG.md) · **English***

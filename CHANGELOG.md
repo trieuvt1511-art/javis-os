@@ -1,3 +1,9 @@
+## 0.466.0
+
+### Cuộc họp cục bộ
+
+- Đang chuẩn bị ghi âm và biên bản họp cục bộ.
+
 # Nhật ký cập nhật
 
 ***Tiếng Việt** · [English](CHANGELOG.en.md)*
